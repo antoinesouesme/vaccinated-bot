@@ -17,7 +17,7 @@ export class TasksService {
         access_token_secret: Env.ACCESS_TOKEN_SECRET,
     })
 
-    @Cron(CronExpression.EVERY_10_SECONDS)
+    @Cron(CronExpression.EVERY_HOUR)
     handleCron() {
         const sentenceToTweet = `${french[this.currentIndex]} prend sa dose ! 💉💉`;
         this.currentIndex++;
